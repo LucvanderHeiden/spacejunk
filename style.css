@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(fonts/Comfortaa-VariableFont_wght.woff2);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(fonts/Sono-VariableFont_MONO,wght.woff2);
+}
+
+body {
+    font-family: Comfortaa;
+    
+    background-color: rgb(4, 4, 15);
+    color: white;
+}
+
+h1 {
+    font-family: Sono;
+    font-weight: 100;
+    font-size: 5em;
+    letter-spacing: .3em;
+}
