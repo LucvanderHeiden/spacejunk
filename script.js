@@ -4,11 +4,13 @@ const debrisImages = [
   "images/debris1.png",
   "images/debris2.png",
   "images/debris3.png",
+  "images/debris4.png",
+  "images/debris5.png",
 ];
 
 function getRandomImage() {
   // 95% chance of selecting a "rock" image
-  if (Math.random() < 0.95) {
+  if (Math.random() < 0.55) {
     return "images/rock.webp";
   } else {
     // 5% chance of selecting any image, including "rock"
