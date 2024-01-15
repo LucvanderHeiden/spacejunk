@@ -1,3 +1,6 @@
+/* ------------------------
+Fonts
+------------------------ */
 @font-face {
   font-family: Comfortaa;
   src: url(fonts/Comfortaa-VariableFont_wght.woff2);
@@ -13,6 +16,9 @@
   src: url(fonts/Roboto-Medium.ttf);
 }
 
+/* ------------------------
+General styling
+------------------------ */
 body {
   display: flex;
   justify-content: center;
@@ -39,14 +45,9 @@ main {
   align-items: center;
 }
 
-h1 {
-  padding: 1.5em;
-
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 5em;
-  letter-spacing: 0.3em;
-}
+/* ------------------------
+Headers & text
+------------------------ */
 
 h2 {
   /* font-family: Roboto; */
@@ -67,6 +68,22 @@ p {
   line-height: 1.4em;
 }
 
+/* ------------------------
+Home screen
+------------------------ */
+h1 {
+  padding: 1.5em;
+  width: 100%;
+  white-space: nowrap;
+
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 5em;
+  letter-spacing: 0.3em;
+
+  animation: titleAnimation 3s ease-out;
+}
+
 section:first-of-type {
   width: 1200px;
   height: 1200px;
@@ -84,6 +101,7 @@ section:first-of-type {
     url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   filter: contrast(145%) brightness(650%) invert(100%);
   mix-blend-mode: screen;
+  animation: imgAnimation 3s ease-out;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -92,6 +110,30 @@ section:first-of-type {
     mix-blend-mode: color-dodge;
   }
 }
+
+@keyframes titleAnimation {
+  from {
+    letter-spacing: 0.8em;
+    font-size: 6em;
+  }
+  to {
+    letter-spacing: 0.3em;
+    font-size: 5em;
+  }
+}
+
+@keyframes imgAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------------
+Introduction
+------------------------ */
 
 section:nth-of-type(2) {
   display: grid;
@@ -104,7 +146,6 @@ section:nth-of-type(2) figure {
 
 section:nth-of-type(2) figure img {
   width: 100%;
-  box-shadow: inset 0em 0em 2em 2em rgb(4, 4, 15);
 }
 
 section:nth-of-type(2) article {
@@ -119,7 +160,10 @@ section:nth-of-type(2) article {
   grid-column-start: 1;
 }
 
-/* Spacejunk */
+/* ------------------------
+Interactive space debris
+------------------------ */
+
 section.spacejunk {
   margin-top: 12em;
   height: 25em;
@@ -152,13 +196,17 @@ section.spacejunk {
   }
 }
 
-/* Future */
+/* ------------------------
+Future
+------------------------ */
 section.future {
   margin-top: 25em;
   width: 50vw;
 }
 
-/* Solutions */
+/* ------------------------
+Solutions
+------------------------ */
 section.solutions {
   margin-top: 25em;
   margin-bottom: 20em;
