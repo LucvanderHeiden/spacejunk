@@ -1,4 +1,8 @@
 const debrisContainer = document.getElementById("debris-container");
+const hud = document.getElementById("hud");
+let health = 100; // Initial health percentage
+const explosionSound = new Audio("audio/explosion.wav");
+explosionSound.volume = 0.3; // Set the volume to 50%
 
 const debrisImages = [
   "images/debris1.png",
@@ -19,25 +23,74 @@ function getRandomImage() {
 }
 
 function createDebris() {
-  const debris = document.createElement("img");
-  debris.src = getRandomImage();
-  debris.alt = "Space Debris";
-  debris.className = "debris";
-  debris.style.width = Math.floor(Math.random() * 4) + "em";
+  const debrisElement = document.createElement("img");
+  debrisElement.src = getRandomImage();
+  debrisElement.alt = "Space Debris";
+  debrisElement.className = "debris";
+  debrisElement.style.width = Math.floor(Math.random() * 4) + "em";
 
   // Set different starting positions, rotations, and layers for each debris
-  debris.style.left = Math.random() * 100 + "%";
-  debris.style.top = Math.random() * 100 + "%";
-  debris.style.transform = `rotate(${Math.random() * 360}deg)`;
-  debris.style.zIndex = Math.floor(Math.random() * 3) + 1; // Number of layers
+  debrisElement.style.left = Math.random() * 100 + "%";
+  debrisElement.style.top = Math.random() * 100 + "%";
+  debrisElement.style.transform = `rotate(${Math.random() * 360}deg)`;
+  debrisElement.style.zIndex = Math.floor(Math.random() * 3) + 1; // Number of layers
 
-  debrisContainer.appendChild(debris);
+  debrisContainer.appendChild(debrisElement);
 
   // Ensure that the animation starts only after the element is added to the DOM
   setTimeout(() => {
-    debris.style.animation = `debrisAnimation 20s linear`;
-    debris.addEventListener("animationend", () => debris.remove()); // Removes debris after animation
+    debrisElement.style.animation = `debrisAnimation 20s linear`;
+    debrisElement.addEventListener("animationend", () =>
+      debrisElement.remove()
+    ); // Removes debris after animation
   }, 0);
 }
 
 setInterval(createDebris, 100); // Interval in miliseconds
+
+function displayHud() {
+  hud.classList.remove("hidden");
+}
+
+debrisContainer.addEventListener("mouseover", function (event) {
+  if (event.target.classList.contains("debris")) {
+    displayHud();
+
+    // Change the image source to the explosion image
+    event.target.src = "images/explosion.png";
+
+    // Play the explosion sound
+    explosionSound.play();
+
+    // Reduce health by 5%
+    health -= 5;
+
+    // Update the width of the health bar
+    updateHealthBar();
+
+    // Set a timeout to revert to the original image after 1 second
+    setTimeout(() => {
+      event.target.remove();
+    }, 1000);
+
+    // Check if health is below a certain threshold and add a class to the HUD
+    if (health <= 25) {
+      hud.classList.add("low-health");
+    }
+  }
+});
+
+function updateHealthBar() {
+  // Clamp health between 0 and 100
+  health = Math.max(0, Math.min(100, health));
+
+  // Update the width of the health bar
+  const healthBar = document.querySelector(".health");
+  healthBar.style.width = health + "%";
+
+  // Check if health is 0 and take appropriate actions (e.g., end the game)
+  if (health === 0) {
+    // Do something when health reaches 0
+    console.log("Game Over!");
+  }
+}
