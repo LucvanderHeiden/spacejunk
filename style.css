@@ -182,25 +182,28 @@ div.solution_btns button {
   color: white;
   background-color: transparent;
 
-  border: 0.1em solid white;
+  border: 0.1em solid transparent;
   border-radius: 50%;
 
   cursor: pointer;
   transition: 0.25s;
 }
 
+div.solution_btns button.btn_active {
+  border-color: white;
+}
+
 div.solution_btns button:hover {
   color: lightskyblue;
-  box-shadow: 3px 3px lightblue;
-  border-color: lightskyblue;
 }
 
 .option {
+  margin-top: 3em;
   display: flex;
 }
 
-.option div {
-  margin: 2em;
+.option div:first-of-type {
+  margin-right: 5em;
 }
 
 .option img {
