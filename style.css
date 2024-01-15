@@ -49,6 +49,7 @@ h1 {
 }
 
 h2 {
+  /* font-family: Roboto; */
   letter-spacing: 0.1em;
   font-size: 3em;
 }
@@ -139,7 +140,7 @@ section.spacejunk {
   left: 100%;
   margin-top: 1em;
 
-  animation: debrisAnimation 20s linear;
+  animation: debrisAnimation 0.1s linear;
 }
 
 @keyframes debrisAnimation {
@@ -151,18 +152,25 @@ section.spacejunk {
   }
 }
 
-/* Solutions */
-section.solutions {
+/* Future */
+section.future {
   margin-top: 25em;
   width: 50vw;
 }
 
-span {
+/* Solutions */
+section.solutions {
+  margin-top: 25em;
+  margin-bottom: 20em;
+  width: 50vw;
+}
+
+div.solution_btns {
   display: flex;
   justify-content: center;
 }
 
-span button {
+div.solution_btns button {
   margin: 2em;
   width: 5em;
   height: 5em;
@@ -181,8 +189,20 @@ span button {
   transition: 0.25s;
 }
 
-span button:hover {
+div.solution_btns button:hover {
   color: lightskyblue;
   box-shadow: 3px 3px lightblue;
   border-color: lightskyblue;
+}
+
+.option {
+  display: flex;
+}
+
+.option div {
+  margin: 2em;
+}
+
+.option img {
+  width: 50em;
 }
