@@ -46,7 +46,7 @@ main {
 }
 
 /* ------------------------
-Headers & text
+Headings & text
 ------------------------ */
 
 h2 {
@@ -309,4 +309,54 @@ div.solution_btns button:hover {
 
 .option img {
   width: 50em;
+}
+
+/* ------------------------
+Media queries
+------------------------ */
+@media screen and (max-width: 1600px) {
+  
+body {
+  font-size: 0.8em;
+}
+h1 {
+  padding: 1.3em;
+  letter-spacing: 0.2em;
+  font-size: 5em;
+
+  animation: titleAnimation 3s ease-out;
+}
+
+section:first-of-type {
+  width: 800px;
+  height: 800px;
+}
+
+@keyframes titleAnimation {
+  from {
+    letter-spacing: 0.6em;
+    font-size: 7em;
+  }
+  to {
+    letter-spacing: 0.2em;
+    font-size: 5em;
+  }
+}
+
+#hud {
+  width: 14em;
+  height: 12em;
+  padding: 1.2em;
+}
+
+.bar {
+  height: 1.2em;
+}
+
+section:nth-of-type(2) article {
+  width: 25vw;
+  position: relative;
+  left: 85em;
+  top: 15em;
+}
 }
