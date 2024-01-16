@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="noise-bg"></div>
     <header>
       <h1>SURROUNDED BY TRASH</h1>
     </header>
@@ -89,6 +90,9 @@
           </p>
         </article>
       </section>
+      <section class="spacejunk">
+        <div id="debris-container2"></div>
+      </section>
       <section class="solutions">
         <article>
           <h2>SOLUTIONS</h2>
@@ -98,12 +102,12 @@
             can clean up the debris currently in orbit around our planet.
           </p>
           <div class="solution_btns">
-            <button class="btn_active">01</button>
-            <button>02</button>
-            <button>03</button>
+            <button class="btn_active" id="btnOne">01</button>
+            <button id="btnTwo">02</button>
+            <button id="btnThree">03</button>
           </div>
         </article>
-        <article class="option">
+        <article id="optionOne" class="option">
           <div>
             <h3>01</h3>
             <h4>FORCED RE-ENTRY</h4>
@@ -123,7 +127,7 @@
           </div>
           <div><img src="images/meteor.jpg" alt="" />`</div>
         </article>
-        <!-- <article class="option">
+        <article id="optionTwo" class="option invis">
           <div>
             <h3>02</h3>
             <h4>RECYCLING IN SPACE</h4>
@@ -131,14 +135,14 @@
           </div>
           <div><img src="images/meteor.jpg" alt="" />`</div>
         </article>
-        <article class="option">
+        <article id="optionThree" class="option invis">
           <div>
             <h3>03</h3>
             <h4>MITIGATION THROUGH LEGISLATION</h4>
             <p>*text explaining this phenomenon*</p>
           </div>
           <div><img src="images/meteor.jpg" alt="" />`</div>
-        </article> -->
+        </article>
       </section>
     </main>
     <footer></footer>

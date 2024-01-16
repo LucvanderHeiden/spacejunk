@@ -17,6 +17,36 @@ Fonts
 }
 
 /* ------------------------
+Scrollbar
+------------------------ */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: white;;
+   border-radius: 10px;
+}
+
+/* ------------------------
+Noise
+------------------------ */
+.noise-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+/* ------------------------
 General styling
 ------------------------ */
 body {
@@ -28,6 +58,8 @@ body {
   font-family: Comfortaa;
 
   background-color: rgb(4, 4, 15);
+  /* background-image: url(images/noise.jpg); */
+
   color: white;
 
   overflow-x: hidden;
@@ -287,15 +319,21 @@ div.solution_btns button {
   border-radius: 50%;
 
   cursor: pointer;
-  transition: 0.25s;
+  transition: .7s;
 }
 
-div.solution_btns button.btn_active {
+div.solution_btns .btn_active {
   border-color: white;
 }
 
 div.solution_btns button:hover {
-  color: lightskyblue;
+  color: aqua;
+  text-shadow: 0px 0px 15px aqua;
+}
+
+div.solution_btns button.btn_active:hover {
+  border-color: aqua;
+  box-shadow: 0px 0px 10px 1px aqua;  
 }
 
 .option {
@@ -311,6 +349,9 @@ div.solution_btns button:hover {
   width: 50em;
 }
 
+.invis {
+  display: none;
+}
 /* ------------------------
 Media queries
 ------------------------ */
@@ -358,5 +399,17 @@ section:nth-of-type(2) article {
   position: relative;
   left: 85em;
   top: 15em;
+}
+
+section.future, section.solutions {
+  width: 60vw;
+}
+
+.option div:first-of-type {
+  margin-right: 3em;
+}
+
+.option img {
+  width: 40em;
 }
 }

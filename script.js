@@ -1,8 +1,16 @@
 const debrisContainer = document.getElementById("debris-container");
+const debrisContainer2 = document.getElementById("debris-container2");
 const hud = document.getElementById("hud");
 let health = 100; // Initial health percentage
 const explosionSound = new Audio("audio/explosion.wav");
 explosionSound.volume = 0.3; // Set the volume to 50%
+
+const btnOne = document.getElementById("btnOne");
+const btnTwo = document.getElementById("btnTwo");
+const btnThree = document.getElementById("btnThree");
+const optionOne = document.getElementById("optionOne");
+const optionTwo = document.getElementById("optionTwo");
+const optionThree = document.getElementById("optionThree");
 
 const debrisImages = [
   "images/debris1.png",
@@ -13,11 +21,11 @@ const debrisImages = [
 ];
 
 function getRandomImage() {
-  // 95% chance of selecting a "rock" image
+  // 55% chance of selecting a "rock" image
   if (Math.random() < 0.55) {
     return "images/rock.webp";
   } else {
-    // 5% chance of selecting any image, including "rock"
+    // 45% chance of selecting any image, including "rock"
     return debrisImages[Math.floor(Math.random() * debrisImages.length)];
   }
 }
@@ -94,3 +102,38 @@ function updateHealthBar() {
     console.log("Game Over!");
   }
 }
+
+// Option buttons
+function pressBtnOne() {
+  btnOne.classList.add("btn_active");
+  btnTwo.classList.remove("btn_active");
+  btnThree.classList.remove("btn_active");
+
+  optionOne.classList.remove("invis");
+  optionTwo.classList.add("invis");
+  optionThree.classList.add("invis");
+}
+
+function pressBtnTwo() {
+  btnOne.classList.remove("btn_active");
+  btnTwo.classList.add("btn_active");
+  btnThree.classList.remove("btn_active");
+
+  optionOne.classList.add("invis");
+  optionTwo.classList.remove("invis");
+  optionThree.classList.add("invis");
+}
+
+function pressBtnThree() {
+  btnOne.classList.remove("btn_active");
+  btnTwo.classList.remove("btn_active");
+  btnThree.classList.add("btn_active");
+
+  optionOne.classList.add("invis");
+  optionTwo.classList.add("invis");
+  optionThree.classList.remove("invis");
+}
+
+btnOne.addEventListener("click", pressBtnOne);
+btnTwo.addEventListener("click", pressBtnTwo);
+btnThree.addEventListener("click", pressBtnThree);
