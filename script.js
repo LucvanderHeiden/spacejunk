@@ -1,4 +1,4 @@
-const debrisContainer = document.getElementById("debris-container");
+const debrisContainer1 = document.getElementById("debris-container");
 const debrisContainer2 = document.getElementById("debris-container2");
 const hud = document.getElementById("hud");
 let health = 100; // Initial health percentage
@@ -32,7 +32,7 @@ function getRandomImage() {
   }
 }
 
-function createDebris() {
+function createDebris(container) {
   const debrisElement = document.createElement("img");
   debrisElement.src = getRandomImage();
   debrisElement.alt = "Space Debris";
@@ -45,24 +45,33 @@ function createDebris() {
   debrisElement.style.transform = `rotate(${Math.random() * 360}deg)`;
   debrisElement.style.zIndex = Math.floor(Math.random() * 3) + 1; // Number of layers
 
-  debrisContainer.appendChild(debrisElement);
+  container.appendChild(debrisElement);
 
   // Ensure that the animation starts only after the element is added to the DOM
   setTimeout(() => {
     debrisElement.style.animation = `debrisAnimation 20s linear`;
     debrisElement.addEventListener("animationend", () =>
       debrisElement.remove()
-    ); // Removes debris after animation
+    );
   }, 0);
 }
 
-setInterval(createDebris, 100); // Interval in miliseconds
+setInterval(() => createDebris(debrisContainer1), 100); // Interval for the first debris field
+setInterval(() => createDebris(debrisContainer2), 100); // Interval for the second debris field
 
 function displayHud() {
   hud.classList.remove("hidden");
 }
 
-debrisContainer.addEventListener("mouseover", function (event) {
+debrisContainer1.addEventListener("mouseover", function (event) {
+  handleDebrisInteraction(event, debrisContainer1);
+});
+
+debrisContainer2.addEventListener("mouseover", function (event) {
+  handleDebrisInteraction(event, debrisContainer2);
+});
+
+function handleDebrisInteraction(event, container) {
   if (event.target.classList.contains("debris")) {
     displayHud();
 
@@ -88,7 +97,7 @@ debrisContainer.addEventListener("mouseover", function (event) {
       hud.classList.add("low-health");
     }
   }
-});
+}
 
 function updateHealthBar() {
   // Clamp health between 0 and 100

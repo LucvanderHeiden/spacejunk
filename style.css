@@ -258,7 +258,7 @@ section.spacejunk {
   overflow: hidden;
 }
 
-#debris-container {
+.debris-containers {
   position: relative;
   width: 100%;
   height: 100%;
