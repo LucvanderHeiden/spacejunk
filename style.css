@@ -32,8 +32,8 @@ Scrollbar
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: white;;
-   border-radius: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* ------------------------
@@ -57,8 +57,8 @@ body {
 
   font-family: Comfortaa;
 
-  background-color: rgb(4, 4, 15);
-  /* background-image: url(images/noise.jpg); */
+  /* background-color: rgb(4, 4, 15); */
+  background-image: url(images/space_bg_moregrain.jpg);
 
   color: white;
 
@@ -139,7 +139,7 @@ section:first-of-type {
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .noise {
     filter: contrast(125%) brightness(650%) invert(100%);
-    mix-blend-mode: color-dodge;
+    /* mix-blend-mode: color-dodge; */
   }
 }
 
@@ -319,7 +319,7 @@ div.solution_btns button {
   border-radius: 50%;
 
   cursor: pointer;
-  transition: .7s;
+  transition: 0.7s;
 }
 
 div.solution_btns .btn_active {
@@ -333,7 +333,7 @@ div.solution_btns button:hover {
 
 div.solution_btns button.btn_active:hover {
   border-color: aqua;
-  box-shadow: 0px 0px 10px 1px aqua;  
+  box-shadow: 0px 0px 10px 1px aqua;
 }
 
 .option {
@@ -356,60 +356,60 @@ div.solution_btns button.btn_active:hover {
 Media queries
 ------------------------ */
 @media screen and (max-width: 1600px) {
-  
-body {
-  font-size: 0.8em;
-}
-h1 {
-  padding: 1.3em;
-  letter-spacing: 0.2em;
-  font-size: 5em;
-
-  animation: titleAnimation 3s ease-out;
-}
-
-section:first-of-type {
-  width: 800px;
-  height: 800px;
-}
-
-@keyframes titleAnimation {
-  from {
-    letter-spacing: 0.6em;
-    font-size: 7em;
+  body {
+    font-size: 0.8em;
   }
-  to {
+  h1 {
+    padding: 1.3em;
     letter-spacing: 0.2em;
     font-size: 5em;
+
+    animation: titleAnimation 3s ease-out;
   }
-}
 
-#hud {
-  width: 14em;
-  height: 12em;
-  padding: 1.2em;
-}
+  section:first-of-type {
+    width: 800px;
+    height: 800px;
+  }
 
-.bar {
-  height: 1.2em;
-}
+  @keyframes titleAnimation {
+    from {
+      letter-spacing: 0.6em;
+      font-size: 7em;
+    }
+    to {
+      letter-spacing: 0.2em;
+      font-size: 5em;
+    }
+  }
 
-section:nth-of-type(2) article {
-  width: 25vw;
-  position: relative;
-  left: 85em;
-  top: 15em;
-}
+  #hud {
+    width: 14em;
+    height: 12em;
+    padding: 1.2em;
+  }
 
-section.future, section.solutions {
-  width: 60vw;
-}
+  .bar {
+    height: 1.2em;
+  }
 
-.option div:first-of-type {
-  margin-right: 3em;
-}
+  section:nth-of-type(2) article {
+    width: 25vw;
+    position: relative;
+    left: 85em;
+    top: 15em;
+  }
 
-.option img {
-  width: 40em;
-}
+  section.future,
+  section.solutions {
+    width: 60vw;
+  }
+
+  .option div:first-of-type {
+    margin-right: 3em;
+  }
+
+  .option img {
+    width: 40em;
+  }
 }

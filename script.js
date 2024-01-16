@@ -5,6 +5,8 @@ let health = 100; // Initial health percentage
 const explosionSound = new Audio("audio/explosion.wav");
 explosionSound.volume = 0.3; // Set the volume to 50%
 
+// const ost = new Audio("audio/maxrichter_return2.mp3");
+
 const btnOne = document.getElementById("btnOne");
 const btnTwo = document.getElementById("btnTwo");
 const btnThree = document.getElementById("btnThree");
