@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spacejunk</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- <script
+      type="module"
+      src="https://threejs.org/build/three.module.js"
+    ></script>
+    <script
+      type="module"
+      src="https://threejs.org/examples/jsm/loaders/GLTFLoader.js"
+    ></script> -->
   </head>
   <body>
     <div class="noise-bg"></div>
@@ -49,6 +57,14 @@
           </p>
         </article>
       </section>
+      <div class="warning-banner">
+        <img src="images/warning_sign.png" alt="Exclamation point" />
+        <div>
+          <h1>WARNING</h1>
+          <h2>DEBRIS FIELD AHEAD</h2>
+        </div>
+        <img src="images/warning_sign.png" alt="Exclamation point" />
+      </div>
       <section class="spacejunk">
         <div class="debris-containers" id="debris-container"></div>
       </section>
@@ -90,9 +106,22 @@
           </p>
         </article>
       </section>
+      <div class="warning-banner">
+        <img src="images/warning_sign.png" alt="Exclamation point" />
+        <div>
+          <h1>WARNING</h1>
+          <h2>DEBRIS FIELD AHEAD</h2>
+        </div>
+        <img src="images/warning_sign.png" alt="Exclamation point" />
+      </div>
       <section class="spacejunk">
         <div class="debris-containers" id="debris-container2"></div>
       </section>
+      <!-- <section class="threejs-container">
+        <section class="threejs-section">
+          <script src="js/threejs-script.js"></script>
+        </section>
+      </section> -->
       <section class="solutions">
         <article>
           <h2>SOLUTIONS</h2>
@@ -146,6 +175,7 @@
       </section>
     </main>
     <footer></footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script type="module" src="js/threejs-script.js"></script> -->
   </body>
 </html>
