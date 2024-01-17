@@ -218,23 +218,50 @@ aside .hidden {
 }
 
 /* ------------------------
-Introduction
+History
+------------------------ */
+section.history div {
+  width: 100vw;
+  margin: 20em 0 20em 0;
+}
+
+section.history div img {
+  position: relative;
+  float: right;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+
+  animation: rocketAnimation 3s ease-out;
+}
+
+@keyframes rocketAnimation {
+  0% {
+    transform: translate(30%, 30%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* ------------------------
+Satellite
 ------------------------ */
 
-section:nth-of-type(2) {
+section:nth-of-type(3) {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-section:nth-of-type(2) figure {
+section:nth-of-type(3) figure {
   width: 100vw;
 }
 
-section:nth-of-type(2) figure img {
+section:nth-of-type(3) figure img {
   width: 100%;
 }
 
-section:nth-of-type(2) article {
+section:nth-of-type(3) article {
   width: 30vw;
   position: relative;
   left: 105em;
