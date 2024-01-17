@@ -94,20 +94,23 @@ h1 {
 h2 {
   /* font-family: Roboto; */
   letter-spacing: 0.1em;
-  font-size: 3em;
+  font-size: 2.8em;
 }
 
 h3 {
   font-family: Roboto;
   letter-spacing: 0.25em;
+  font-size: 1.25em;
 }
 
 h4 {
   letter-spacing: 0.1em;
+  font-size: 1.5em;
 }
 
 p {
   line-height: 1.4em;
+  font-size: 1.15em;
 }
 
 /* ------------------------
@@ -220,19 +223,31 @@ aside .hidden {
 /* ------------------------
 History
 ------------------------ */
-section.history div {
-  width: 100vw;
+section.history {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section.history figure {
+  width: 105vw;
   margin: 20em 0 20em 0;
 }
 
-section.history div img {
+section.history figure img {
   position: relative;
   float: right;
-  width: 90%;
+  width: 85%;
   padding: 0;
   margin: 0;
 
-  animation: rocketAnimation 3s ease-out;
+  /* animation: rocketAnimation 3s ease-out; */
+}
+
+section.history article {
+  width: 30vw;
+  position: relative;
+  left: 15em;
+  top: 45em;
 }
 
 @keyframes rocketAnimation {
@@ -242,6 +257,28 @@ section.history div img {
   100% {
     transform: translate(0%, 0%);
   }
+}
+
+.overlap {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.corner-borders {
+  padding: 0.1em 1em 0.5em 1.5em;
+
+  background: linear-gradient(to right, white 3px, transparent 3px) 0 0,
+    linear-gradient(to right, white 3px, transparent 3px) 0 100%,
+    linear-gradient(to left, white 3px, transparent 3px) 100% 0,
+    linear-gradient(to left, white 3px, transparent 3px) 100% 100%,
+    linear-gradient(to bottom, white 3px, transparent 3px) 0 0,
+    linear-gradient(to bottom, white 3px, transparent 3px) 100% 0,
+    linear-gradient(to top, white 3px, transparent 3px) 0 100%,
+    linear-gradient(to top, white 3px, transparent 3px) 100% 100%;
+
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border-radius: 6px;
 }
 
 /* ------------------------
@@ -266,11 +303,6 @@ section:nth-of-type(3) article {
   position: relative;
   left: 105em;
   top: 30em;
-}
-
-.overlap {
-  grid-row-start: 1;
-  grid-column-start: 1;
 }
 
 /* ------------------------

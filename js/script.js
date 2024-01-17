@@ -20,6 +20,7 @@ const debrisImages = [
   "images/debris3.png",
   "images/debris4.png",
   "images/debris5.png",
+  "images/owship.png",
 ];
 
 function getRandomImage() {
