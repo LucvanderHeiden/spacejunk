@@ -199,31 +199,47 @@ const boosterInfo = document.getElementById("booster-info");
 const gloveInfo = document.getElementById("glove-info");
 
 function displaySatelliteInfo() {
-  satelliteInfo.style.display = "block";
-  metalInfo.style.display = "none";
-  boosterInfo.style.display = "none";
-  gloveInfo.style.display = "none";
+  satelliteInfo.classList.remove("info-box-hidden");
+  satelliteInfo.classList.add("info-box-anim");
+  metalInfo.classList.add("info-box-hidden");
+  metalInfo.classList.remove("info-box-anim");
+  boosterInfo.classList.add("info-box-hidden");
+  boosterInfo.classList.remove("info-box-anim");
+  gloveInfo.classList.add("info-box-hidden");
+  gloveInfo.classList.remove("info-box-anim");
 }
 
 function displayMetalInfo() {
-  satelliteInfo.style.display = "none";
-  metalInfo.style.display = "block";
-  boosterInfo.style.display = "none";
-  gloveInfo.style.display = "none";
+  satelliteInfo.classList.add("info-box-hidden");
+  satelliteInfo.classList.remove("info-box-anim");
+  metalInfo.classList.remove("info-box-hidden");
+  metalInfo.classList.add("info-box-anim");
+  boosterInfo.classList.add("info-box-hidden");
+  boosterInfo.classList.remove("info-box-anim");
+  gloveInfo.classList.add("info-box-hidden");
+  gloveInfo.classList.remove("info-box-anim");
 }
 
 function displayBoosterInfo() {
-  satelliteInfo.style.display = "none";
-  metalInfo.style.display = "none";
-  boosterInfo.style.display = "block";
-  gloveInfo.style.display = "none";
+  satelliteInfo.classList.add("info-box-hidden");
+  satelliteInfo.classList.remove("info-box-anim");
+  metalInfo.classList.add("info-box-hidden");
+  metalInfo.classList.remove("info-box-anim");
+  boosterInfo.classList.remove("info-box-hidden");
+  boosterInfo.classList.add("info-box-anim");
+  gloveInfo.classList.add("info-box-hidden");
+  gloveInfo.classList.remove("info-box-anim");
 }
 
 function displayGloveInfo() {
-  satelliteInfo.style.display = "none";
-  metalInfo.style.display = "none";
-  boosterInfo.style.display = "none";
-  gloveInfo.style.display = "block";
+  satelliteInfo.classList.add("info-box-hidden");
+  satelliteInfo.classList.remove("info-box-anim");
+  metalInfo.classList.add("info-box-hidden");
+  metalInfo.classList.remove("info-box-anim");
+  boosterInfo.classList.add("info-box-hidden");
+  boosterInfo.classList.remove("info-box-anim");
+  gloveInfo.classList.remove("info-box-hidden");
+  gloveInfo.classList.add("info-box-anim");
 }
 
 satelliteBtn.addEventListener("click", displaySatelliteInfo);

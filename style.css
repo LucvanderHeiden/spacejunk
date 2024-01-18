@@ -513,9 +513,26 @@ section.what-debris img#earth {
   background-size: 20px 20px;
   border-radius: 8px;
 
-  display: none;
+  /* display: none; */
 
   transition: 1s;
+}
+
+.info-box-hidden {
+  display: none;
+}
+
+.info-box-anim {
+  animation: infoboxAnimation 2s;
+}
+
+@keyframes infoboxAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes itemRotation {
