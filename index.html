@@ -20,6 +20,7 @@
       <h1>SURROUNDED BY TRASH</h1>
     </header>
     <main>
+      <!-- HUD -->
       <aside>
         <div id="hud" class="hidden">
           <h3>SHIP HEALTH</h3>
@@ -32,6 +33,17 @@
           </p>
         </div>
       </aside>
+      <!-- DEATH SCREEN -->
+      <div id="death-screen">
+        <div>
+          <h2>SPACESHIP DAMAGED BEYOND REPAIR</h2>
+          <p>
+            Your spaceship has had too many collisions. All navigational
+            functions are offline.
+          </p>
+          <button id="death-button">Retry</button>
+        </div>
+      </div>
       <!-- VISUAL -->
       <section id="visual">
         <div class="noise"></div>
@@ -93,9 +105,9 @@
         </figure>
         <article class="overlap">
           <div class="corner-borders text-reveal">
-            <h2>NO MORE SPACE TRAVEL?</h2>
+            <h2>TRAFFIC PARADISE</h2>
             <p>
-              Humanity has been using satellites for more than half a decade
+              <!-- Humanity has been using satellites for more than half a decade
               for, among other applications, communication, observation,
               navigation and science. These satellites are sent up into space
               and are then placed in an orbit around the earth. This means they
@@ -103,7 +115,22 @@
               are able to orbit the earth almost indefinitely. However, the
               amount of satellites currently in orbit around the earth is
               getting out of hand and if we don't collectively do something
-              about this, the consequences will be very severe.
+              about this, the consequences will be very severe.-->
+              These days it is difficult to imagine our lives without the
+              constant and instant connectivity that we're used to. We don't
+              just use our mobile phones to stay connected to our friends and
+              family, we use them for vital information during our jobs,
+              travelling and emergencies. However, space is getting busier every
+              day. Where there were once only a handful of satellites, Earth is
+              now surrounded by more than 1 million pieces of debris, which is
+              travelling at enormously high speeds. If we don't do anything to
+              stop this, space will get more and more crowded until one day
+              we've reached a tipping point. Debris will collide with other
+              debris, in turn creating a lot more debris, this will once again
+              collide with more debris, creating a never ending chain reaction,
+              until our entire planet is practically blanketed with debris. This
+              hypothetical phenomenon is the called the Kessler problem and if
+              we don't change our ways, it could be our future.
             </p>
           </div>
         </article>
@@ -122,7 +149,14 @@
         <div class="debris-containers" id="debris-container"></div>
       </section>
       <!-- TYPES OF DEBRIS -->
-      <div><h2>What kinds of space debris is out there?</h2></div>
+      <div class="center">
+        <h2>WHAT KIND OF SPACE DEBRIS IS OUT THERE?</h2>
+        <p>
+          Space debris ranges from broken down satellites the size of a bus, to
+          small pieces of metal no larger than a pebble. But where does it all
+          come from? And how does it end up in space?
+        </p>
+      </div>
       <section class="what-debris">
         <div><img id="earth" src="images/earth.png" alt="Milky Way" /></div>
         <div class="types-of-debris">
@@ -145,45 +179,64 @@
             <h4 class="info-box-h4">SATELLITES</h4>
             <p class="info-box-p">
               There are currently more than 8,000 satellites orbiting Earth.
-              There are currently more than 8,000 satellites orbiting Earth.
-              There are currently more than 8,000 satellites orbiting Earth.
-              There are currently more than 8,000 satellites orbiting Earth.
-              There are currently more than 8,000 satellites orbiting
-              Earth.There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth.There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth.There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth. There are currently more than 8,000 satellites orbiting
-              Earth.
+              Most of these satellites are in lower earth orbit (LEO). This
+              means they travel in orbit around 500-1,000 kilometer above the
+              Earth. The five most common uses for these satellites are:
+              communication, Earth observation, technology development,
+              navigation and space science. The amount of satellites being used
+              for communication is more than all of the other types of
+              satellites combined. <br />
+              <br />
+
+              Did you know that the average satellite used for communication or
+              navigation is about the same size and weight as a bus?
             </p>
           </div>
           <div id="metal-info" class="info-box info-box-hidden">
             <h3 class="info-box-h3">02</h3>
-            <h4 class="info-box-h4">SATELLITE DEBRIS</h4>
-            <p class="info-box-p">Lots of debris from satellites.</p>
+            <h4 class="info-box-h4">CONSTRUCTION PARTS</h4>
+            <p class="info-box-p">
+              Currently there are more than 1 million pieces of debris in orbit
+              around the Earth. Most of these are only a couple centimeters in
+              size. This may not sound like much of an issue, but these parts
+              are travelling at a speed of 7 kilometers per second. At that
+              speed it would take you only about 90 minutes to travel around the
+              Earth completely. Because of this these pieces of debris
+              practically act like a bullet, only heavier, larger and faster.
+
+              <br /><br />These are parts that have potentially broken off of
+              satellites or in some cases they are the remains of crashed
+              satellites. In 2009 two communications satellites collided in
+              space. This collision caused at least 1,000 pieces of debris
+              larger than 10 centimers. Because of the high velocity during the
+              impact this debris was scattered in a wide area.
+            </p>
           </div>
           <div id="booster-info" class="info-box info-box-hidden">
             <h3 class="info-box-h3">03</h3>
             <h4 class="info-box-h4">ROCKETS</h4>
             <p class="info-box-p">
-              Lots of rockets leave behind booster parts or fuel tanks.
+              When a rocket launches into space it will do so in stages. The
+              boosters furthest on the bottom will expend all their full and the
+              rocket will then decouple them, so as to lose unnecessary weight.
+              Usually these parts will then fall back into the atmosphere where
+              they either burn up or land somewhere on Earth to be recovered.
+              However, sometimes these parts do not fall back to Earth, but
+              instead keep floating around in space. These parts can be very
+              large and therefor quite dangerous.
             </p>
           </div>
           <div id="glove-info" class="info-box info-box-hidden">
             <h3 class="info-box-h3">04</h3>
             <h4 class="info-box-h4">MISCELLANEOUS DEBRIS</h4>
             <p class="info-box-p">
-              There's also all kinds of random stuff floating around.
+              There's also all kinds of random stuff floating around in space.
+              For example in 1965 astronaut Ed White accidentally misplaced a
+              spare glove, which is now still floating somewhere in orbit around
+              the Earth. Astronaut Piers Sellers managed to lose a spatula in
+              space in 2005. Lastly, during a 2007 spacewalk astronaut Sunita
+              Williams lost grip of a special space camera, which proceeded to
+              drift away from the ship.
             </p>
           </div>
         </div>
@@ -196,34 +249,40 @@
           <h3>01</h3>
           <h4>IMPACT ON DAILY LIFE</h4>
           <p>
-            Not being able to travel into space anymore would be a huge loss for
-            us all, but why is this even happening? Currently earth is being
-            orbited by millions of objects. Some of these are space stations and
-            satellites currently in use for a number of reasons. However, a
-            large part of the space is being taken up by literal junk...
-            spacejunk. This consists of old sattelites, broken equipment or
-            simply debris from either of these. For objects to stay in orbit
-            around the earth they have to travel at enormous speeds. These
-            objects travel at around 7 kilometers per second. At that speed it
-            would take you about one and a half hours to travel a complete
-            circle around the earth.
+            The looming threat of the Kessler Syndrome poses a direct risk to
+            the daily lives of ordinary individuals. As the density of space
+            debris continues to escalate, the potential consequences for our
+            daily routines become increasingly tangible. Essential services that
+            rely on satellites, such as weather forecasts, global navigation
+            systems, and communication networks, may face disruptions. This
+            means that the accuracy of weather predictions we rely on, the
+            seamless functioning of our GPS navigation, and even the reliability
+            of our everyday communication tools could be compromised. The
+            implications are clear that the average person may find their daily
+            life significantly influenced by the growing menace of space debris,
+            highlighting the urgency of addressing this issue to safeguard our
+            technological dependencies.
           </p>
         </article>
         <article>
           <h3>02</h3>
           <h4>IMPACT ON SCIENCE AND EXPLORATION</h4>
           <p>
-            Not being able to travel into space anymore would be a huge loss for
-            us all, but why is this even happening? Currently earth is being
-            orbited by millions of objects. Some of these are space stations and
-            satellites currently in use for a number of reasons. However, a
-            large part of the space is being taken up by literal junk...
-            spacejunk. This consists of old sattelites, broken equipment or
-            simply debris from either of these. For objects to stay in orbit
-            around the earth they have to travel at enormous speeds. These
-            objects travel at around 7 kilometers per second. At that speed it
-            would take you about one and a half hours to travel a complete
-            circle around the earth.
+            Imagine our cosmic playground turning into a chaotic space disco
+            ball, thanks to the Kessler Syndrome. The mess up there isn't just a
+            bummer for your stargazing plans; it's giving scientists and space
+            explorers a real headache. Telescopes that once effortlessly
+            captured the wonders of the universe might start playing
+            hide-and-seek with rogue debris, making it hard to get those
+            jaw-dropping shots of distant galaxies. Think about our space probes
+            and rovers trying to navigate through a cosmic obstacle course. It's
+            like trying to skateboard in a crowded mall during a shopping
+            frenzy. Plus, launching new missions becomes riskier than playing
+            intergalactic roulette. The Kessler Syndrome isn't just cramping our
+            style; it's throwing a celestial spanner into the gears of our
+            scientific exploration. So, if you were hoping for a front-row seat
+            to humanity's cosmic adventures, you might want to root for a
+            debris-free sky.
           </p>
         </article>
       </section>
@@ -243,7 +302,7 @@
       <!-- SOLUTIONS -->
       <section class="solutions">
         <article>
-          <h2>SOLUTIONS</h2>
+          <h2>WHAT CAN BE DONE?</h2>
           <p>
             So what can be done about this problem? There are solutions that can
             either prevent more space debris in the future and solutions that
@@ -260,36 +319,85 @@
             <h3>01</h3>
             <h4>FORCED RE-ENTRY</h4>
             <p>
-              Not being able to travel into space anymore would be a huge loss
-              for us all, but why is this even happening? Currently earth is
-              being orbited by millions of objects. Some of these are space
-              stations and satellites currently in use for a number of reasons.
-              However, a large part of the space is being taken up by literal
-              junk... spacejunk. This consists of old sattelites, broken
-              equipment or simply debris from either of these. For objects to
-              stay in orbit around the earth they have to travel at enormous
-              speeds. These objects travel at around 7 kilometers per second. At
-              that speed it would take you about one and a half hours to travel
-              a complete circle around the earth.
+              This technique has already been succesfully tested before. The
+              idea is to slow down a piece of debris, for example an old
+              satellite, so that it starts falling out of orbit. At some point
+              it will re-enter the Earth's atmosphere where it will face more
+              and more atmospheric resistance. This in turn will cause the
+              satellite to heat up too incredibly high temperatures, which will
+              cause it to burn up completely. This is not only an effective way
+              to get rid of large pieces of space debris, it also has the added
+              benefit of causing a beautiful and unique sight; a falling star.
+              Some innovators, like Daan Roosegaarde, are already looking into
+              the potential to, with enough coordination, turn these events into
+              falling star shows. These could perhaps replace the need for
+              fireworks shows, which in turn create a lot of debris on our own
+              planet.
             </p>
           </div>
-          <div><img src="images/meteor.jpg" alt="" />`</div>
+          <div>
+            <img
+              src="images/burningup.jpg"
+              alt="Debris burning up in the atmosphere"
+            />`
+          </div>
         </article>
         <article id="optionTwo" class="option invis">
           <div>
             <h3>02</h3>
             <h4>RECYCLING IN SPACE</h4>
-            <p>*text explaining this phenomenon*</p>
+            <p>
+              Recycling has become quite commonplace on our planet by now.
+              However, this same push for recycling has not found its way into
+              space yet. Repurposing and recycling space waste can offer a lot
+              of advantages. By establishing a facility in Earth's orbit
+              dedicated to repairing and repurposing satellites and discarded
+              space objects, we can transform space trash into valuable
+              resources for constructing future spacecraft and exploration
+              outposts. This approach not only minimizes the need for new
+              launches but also contributes to reducing overall space debris.
+              Beyond the environmental benefits, recycling satellites can serve
+              as a sustainable source of raw materials and potential revenue for
+              funding future space endeavors. Additionally, this recycled
+              technology could contribute to the development of advanced
+              space-based instruments, such as cameras deployed on Gateway Earth
+              to monitor the skies for potential asteroid threats.
+            </p>
           </div>
-          <div><img src="images/meteor.jpg" alt="" />`</div>
+          <div>
+            <img
+              id="recycle-img"
+              src="images/recycling.webp"
+              alt="Recycling in space"
+            />`
+          </div>
         </article>
         <article id="optionThree" class="option invis">
           <div>
             <h3>03</h3>
             <h4>MITIGATION THROUGH LEGISLATION</h4>
-            <p>*text explaining this phenomenon*</p>
+            <p>
+              Maybe the most important thing is to have a better plan for the
+              future of space exploitation. Using space has huge economic and
+              strategic value for a lot of companies and even countries. Given
+              the freedom to do what they want, these parties will continue to
+              use space for as long as it's viable to them. Therefor, it is
+              extremely important that international commitees, such as the UN,
+              set in place guidelines and laws that counteract the
+              overutilization of space. Some institutions like the NASA and ESA
+              are already planning on becoming space-debris neutral in the near
+              future. This will be of great help, yet if other companies or
+              institutions do not follow the problem will merely be slowed down,
+              not solved.
+            </p>
           </div>
-          <div><img src="images/meteor.jpg" alt="" />`</div>
+          <div>
+            <img
+              id="iss-img"
+              src="images/iss.jpg"
+              alt="International Space Station"
+            />`
+          </div>
         </article>
       </section>
     </main>

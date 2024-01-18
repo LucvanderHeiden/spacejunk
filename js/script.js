@@ -1,7 +1,10 @@
+const bodyElement = document.querySelector("body");
 const debrisContainer1 = document.getElementById("debris-container");
 const debrisContainer2 = document.getElementById("debris-container2");
 const hud = document.getElementById("hud");
 let health = 100; // Initial health percentage
+const deathScreen = document.getElementById("death-screen");
+const deathButton = document.getElementById("death-button");
 const explosionSound = new Audio("audio/explosion.wav");
 explosionSound.volume = 0.3; // Set the volume to 50%
 
@@ -73,29 +76,31 @@ debrisContainer2.addEventListener("mouseover", function (event) {
 });
 
 function handleDebrisInteraction(event, container) {
-  if (event.target.classList.contains("debris")) {
-    displayHud();
+  if (health > 0) {
+    if (event.target.classList.contains("debris")) {
+      displayHud();
 
-    // Change the image source to the explosion image
-    event.target.src = "images/explosion.png";
+      // Change the image source to the explosion image
+      event.target.src = "images/explosion.png";
 
-    // Play the explosion sound
-    explosionSound.play();
+      // Play the explosion sound
+      explosionSound.play();
 
-    // Reduce health by 5%
-    health -= 5;
+      // Reduce health by 5%
+      health -= 5;
 
-    // Update the width of the health bar
-    updateHealthBar();
+      // Update the width of the health bar
+      updateHealthBar();
 
-    // Set a timeout to revert to the original image after 1 second
-    setTimeout(() => {
-      event.target.remove();
-    }, 1000);
+      // Set a timeout to revert to the original image after 1 second
+      setTimeout(() => {
+        event.target.remove();
+      }, 1000);
 
-    // Check if health is below a certain threshold and add a class to the HUD
-    if (health <= 25) {
-      hud.classList.add("low-health");
+      // Check if health is below a certain threshold and add a class to the HUD
+      if (health <= 25) {
+        hud.classList.add("low-health");
+      }
     }
   }
 }
@@ -109,11 +114,20 @@ function updateHealthBar() {
   healthBar.style.width = health + "%";
 
   // Check if health is 0 and take appropriate actions (e.g., end the game)
-  if (health === 0) {
+  if (health <= 0) {
     // Do something when health reaches 0
     console.log("Game Over!");
+    deathScreen.style.display = "block";
+    bodyElement.style.overflowY = "hidden";
   }
 }
+
+function reloadPage() {
+  window.scrollTo(0, 0);
+  location.reload();
+}
+
+deathButton.addEventListener("click", reloadPage);
 
 // Option buttons
 function pressBtnOne() {
