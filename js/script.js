@@ -7,8 +7,8 @@ const deathScreen = document.getElementById("death-screen");
 const deathButton = document.getElementById("death-button");
 const explosionSound = new Audio("audio/explosion.wav");
 explosionSound.volume = 0.3; // Set the volume to 50%
-
-// const ost = new Audio("audio/maxrichter_return2.mp3");
+// const h1 = document.querySelector("h1");
+const ost = new Audio("audio/maxrichter_return2.mp3");
 
 const btnOne = document.getElementById("btnOne");
 const btnTwo = document.getElementById("btnTwo");
@@ -25,6 +25,12 @@ const debrisImages = [
   "images/debris5.png",
   "images/owship.png",
 ];
+
+document.body.onkeyup = function (e) {
+  if (e.key == " " || e.code == "KeyE" || e.keyCode == 32) {
+    ost.play();
+  }
+};
 
 function getRandomImage() {
   // 55% chance of selecting a "rock" image
