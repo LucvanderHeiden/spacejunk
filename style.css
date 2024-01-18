@@ -50,6 +50,9 @@ Noise
 General styling
 ------------------------ */
 body {
+  max-width: 100vw !important;
+  margin: 0;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -57,7 +60,6 @@ body {
 
   font-family: Comfortaa;
 
-  /* background-color: rgb(4, 4, 15); */
   background-image: url(images/space_bg_moregrain.jpg);
 
   color: white;
@@ -201,7 +203,7 @@ aside .hidden {
 }
 
 .health {
-  width: 98%;
+  width: 100%;
   height: 75%;
 
   margin: 2px;
@@ -229,34 +231,38 @@ section.history {
 }
 
 section.history figure {
-  width: 105vw;
+  width: 100vw;
   margin: 20em 0 20em 0;
 }
 
 section.history figure img {
   position: relative;
-  float: right;
+  left: 30em;
   width: 85%;
   padding: 0;
   margin: 0;
 
-  /* animation: rocketAnimation 3s ease-out; */
+  transition: 3s ease-in-out;
 }
 
 section.history article {
-  width: 30vw;
+  width: 25%;
   position: relative;
   left: 15em;
-  top: 45em;
+  top: 40em;
 }
 
-@keyframes rocketAnimation {
-  0% {
-    transform: translate(30%, 30%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
+section.history div {
+  transition: 2s ease-in-out;
+}
+
+.text-reveal {
+  opacity: 0;
+  transform: translateY(2em);
+}
+
+.rocket-reveal {
+  transform: translate(30%, 30%);
 }
 
 .overlap {
@@ -278,7 +284,7 @@ section.history article {
 
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 /* ------------------------
@@ -302,7 +308,11 @@ section:nth-of-type(3) article {
   width: 30vw;
   position: relative;
   left: 105em;
-  top: 30em;
+  top: 25em;
+}
+
+section:nth-of-type(3) article div {
+  transition: 2s ease-in-out;
 }
 
 /* ------------------------
@@ -378,6 +388,7 @@ Interactive space debris
 
 section.spacejunk {
   margin-top: 12em;
+  margin-bottom: 18em;
   height: 25em;
   width: 100vw;
   padding: 2em;
@@ -414,6 +425,115 @@ Future
 section.future {
   margin-top: 25em;
   width: 50vw;
+}
+
+/* ------------------------
+Kinds of space debris
+------------------------ */
+section.what-debris {
+  width: 100vw;
+  margin-bottom: 20em;
+  position: relative;
+  left: 0;
+
+  display: grid;
+
+  grid-template-columns: 4fr 1fr 3fr;
+}
+
+section.what-debris div {
+  margin-top: 8em;
+  margin-bottom: 8em;
+}
+
+.type {
+  width: 20%;
+  padding: 0.1em 1em 0.5em 1.5em;
+
+  background: linear-gradient(to right, white 2px, transparent 2px) 0 0,
+    linear-gradient(to right, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.type:hover {
+  transform: scale(1.1);
+}
+
+section.what-debris img#earth {
+  width: 70em;
+
+  animation: earthAnimation 200s linear infinite;
+}
+
+.types-of-debris div:first-of-type img {
+  width: 4.5em;
+  animation: itemRotation 50s linear infinite;
+}
+
+.types-of-debris div:nth-of-type(2) img {
+  width: 3.5em;
+  animation: itemRotation 4s linear infinite;
+}
+
+.types-of-debris div:nth-of-type(3) img {
+  width: 4em;
+  animation: itemRotation 32s linear infinite;
+}
+
+.types-of-debris div:nth-of-type(4) img {
+  width: 3em;
+  animation: itemRotation 20s linear infinite;
+}
+
+.info-box {
+  margin-right: 7em;
+  padding: 0.1em 1em 0.5em 1.5em;
+  background: linear-gradient(to right, white 3px, transparent 3px) 0 0,
+    linear-gradient(to right, white 3px, transparent 3px) 0 100%,
+    linear-gradient(to left, white 3px, transparent 3px) 100% 0,
+    linear-gradient(to left, white 3px, transparent 3px) 100% 100%,
+    linear-gradient(to bottom, white 3px, transparent 3px) 0 0,
+    linear-gradient(to bottom, white 3px, transparent 3px) 100% 0,
+    linear-gradient(to top, white 3px, transparent 3px) 0 100%,
+    linear-gradient(to top, white 3px, transparent 3px) 100% 100%;
+
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border-radius: 8px;
+
+  display: none;
+
+  transition: 1s;
+}
+
+@keyframes itemRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes earthAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ------------------------
@@ -455,12 +575,12 @@ div.solution_btns .btn_active {
 
 div.solution_btns button:hover {
   color: aqua;
-  text-shadow: 0px 0px 15px aqua;
+  text-shadow: 0px 0px 15px #00ffff;
 }
 
 div.solution_btns button.btn_active:hover {
   border-color: aqua;
-  box-shadow: 0px 0px 10px 1px aqua;
+  box-shadow: 0px 0px 10px 1px #00ffff;
 }
 
 .option {
@@ -484,7 +604,7 @@ div.solution_btns button.btn_active:hover {
 3D
 ------------------------ */
 
-.threejs-container {
+/* .threejs-container {
   position: relative;
 }
 
@@ -493,8 +613,8 @@ div.solution_btns button.btn_active:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 500px; /* Adjust the height as needed */
-}
+  height: 500px;
+} */
 
 /* ------------------------
 Media queries

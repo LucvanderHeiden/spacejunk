@@ -32,15 +32,22 @@
           </p>
         </div>
       </aside>
+      <!-- VISUAL -->
       <section id="visual">
         <div class="noise"></div>
       </section>
+      <!-- HISTORY -->
       <section class="history">
         <figure class="overlap">
-          <img src="images/rocket2.png" alt="Rocket launch" />
+          <img
+            id="rocket"
+            class="rocket-reveal"
+            src="images/rocket2.png"
+            alt="Rocket launch"
+          />
         </figure>
         <article class="overlap">
-          <div class="corner-borders">
+          <div class="corner-borders text-reveal">
             <h2>TO INFINITY AND BEYOND</h2>
             <p>
               In the second half of the 20th century, humanity ventured beyond
@@ -58,7 +65,7 @@
               pivotal role in discovering the ozone hole over Antarctica,
               pinpointing forest fires, and providing images of the Chernobyl
               nuclear disaster in 1986. Astronomical satellites, such as the
-              Hubble Space Telescope and the more resent JWST, contributed to
+              Hubble Space Telescope and the more recent JWST, contributed to
               the exploration of new stars and offered a fresh perspective on
               the center of our galaxy. The knowlegde we gained by going into
               space changed the way we look at the universe and our place within
@@ -76,6 +83,7 @@
           </div>
         </article>
       </section>
+      <!-- SATELLITE SECTION -->
       <section>
         <figure class="overlap">
           <img
@@ -84,7 +92,7 @@
           />
         </figure>
         <article class="overlap">
-          <div class="corner-borders">
+          <div class="corner-borders text-reveal">
             <h2>NO MORE SPACE TRAVEL?</h2>
             <p>
               Humanity has been using satellites for more than half a decade
@@ -100,6 +108,7 @@
           </div>
         </article>
       </section>
+      <!-- WARNING BANNER -->
       <div class="warning-banner">
         <img src="images/warning_sign.png" alt="Exclamation point" />
         <div>
@@ -108,9 +117,78 @@
         </div>
         <img src="images/warning_sign.png" alt="Exclamation point" />
       </div>
+      <!-- INTERACTIVE SPACE DEBRIS -->
       <section class="spacejunk">
         <div class="debris-containers" id="debris-container"></div>
       </section>
+      <!-- TYPES OF DEBRIS -->
+      <div><h2>What kinds of space debris is out there?</h2></div>
+      <section class="what-debris">
+        <div><img id="earth" src="images/earth.png" alt="Milky Way" /></div>
+        <div class="types-of-debris">
+          <div id="satellite-btn" class="type">
+            <img src="images/satellite.png" alt="Satellite" />
+          </div>
+          <div id="metal-btn" class="type">
+            <img src="images/metal.png" alt="Debris part" />
+          </div>
+          <div id="booster-btn" class="type">
+            <img src="images/booster.png" alt="Rocket part" />
+          </div>
+          <div id="glove-btn" class="type">
+            <img src="images/glove.png" alt="Spacesuit glove" />
+          </div>
+        </div>
+        <div>
+          <div id="satellite-info" class="info-box">
+            <h3 class="info-box-h3">01</h3>
+            <h4 class="info-box-h4">SATELLITES</h4>
+            <p class="info-box-p">
+              There are currently more than 8,000 satellites orbiting Earth.
+              There are currently more than 8,000 satellites orbiting Earth.
+              There are currently more than 8,000 satellites orbiting Earth.
+              There are currently more than 8,000 satellites orbiting Earth.
+              There are currently more than 8,000 satellites orbiting
+              Earth.There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth.There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth.There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth. There are currently more than 8,000 satellites orbiting
+              Earth.
+            </p>
+          </div>
+          <div id="metal-info" class="info-box">
+            <h3 class="info-box-h3">02</h3>
+            <h4 class="info-box-h4">SATELLITE DEBRIS</h4>
+            <p class="info-box-p">Lots of debris from satellites.</p>
+          </div>
+          <div id="booster-info" class="info-box">
+            <h3 class="info-box-h3">03</h3>
+            <h4 class="info-box-h4">ROCKETS</h4>
+            <p class="info-box-p">
+              Lots of rockets leave behind booster parts or fuel tanks.
+            </p>
+          </div>
+          <div id="glove-info" class="info-box">
+            <h3 class="info-box-h3">04</h3>
+            <h4 class="info-box-h4">MISCELLANEOUS DEBRIS</h4>
+            <p class="info-box-p">
+              There's also all kinds of random stuff floating around.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- FUTURE SECTION -->
       <section class="future">
         <h2>WHAT WILL HAPPEN?</h2>
         <p>What will happen if we don't do anything to solve this problem?</p>
@@ -149,6 +227,7 @@
           </p>
         </article>
       </section>
+      <!-- WARNING BANNER -->
       <div class="warning-banner">
         <img src="images/warning_sign.png" alt="Exclamation point" />
         <div>
@@ -157,14 +236,11 @@
         </div>
         <img src="images/warning_sign.png" alt="Exclamation point" />
       </div>
+      <!-- INTERACTIVE SPACE DEBRIS -->
       <section class="spacejunk">
         <div class="debris-containers" id="debris-container2"></div>
       </section>
-      <!-- <section class="threejs-container">
-        <section class="threejs-section">
-          <script src="js/threejs-script.js"></script>
-        </section>
-      </section> -->
+      <!-- SOLUTIONS -->
       <section class="solutions">
         <article>
           <h2>SOLUTIONS</h2>
@@ -219,6 +295,5 @@
     </main>
     <footer></footer>
     <script src="js/script.js"></script>
-    <!-- <script type="module" src="js/threejs-script.js"></script> -->
   </body>
 </html>

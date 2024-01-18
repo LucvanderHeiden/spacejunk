@@ -149,3 +149,84 @@ function pressBtnThree() {
 btnOne.addEventListener("click", pressBtnOne);
 btnTwo.addEventListener("click", pressBtnTwo);
 btnThree.addEventListener("click", pressBtnThree);
+
+// Reveal animations
+// const rocket = document.querySelector(".rocket-reveal");
+function textboxReveal() {
+  setTimeout(() => {
+    var textReveal = document.querySelectorAll(".text-reveal");
+    for (var i = 0; i < textReveal.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = textReveal[i].getBoundingClientRect().top;
+      var elementVisible = 500;
+      if (elementTop < windowHeight - elementVisible) {
+        textReveal[i].classList.remove("text-reveal");
+      }
+    }
+  }, "1000");
+}
+
+function rocketReveal() {
+  var rocket = document.querySelectorAll(".rocket-reveal");
+  for (var i = 0; i < rocket.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = rocket[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      rocket[i].classList.remove("rocket-reveal");
+    }
+  }
+}
+
+window.addEventListener("scroll", () => {
+  textboxReveal();
+  rocketReveal();
+});
+
+// To check the scroll position on page load
+textboxReveal;
+rocketReveal();
+
+// Info buttons
+const satelliteBtn = document.getElementById("satellite-btn");
+const metalBtn = document.getElementById("metal-btn");
+const boosterBtn = document.getElementById("booster-btn");
+const gloveBtn = document.getElementById("glove-btn");
+
+const satelliteInfo = document.getElementById("satellite-info");
+const metalInfo = document.getElementById("metal-info");
+const boosterInfo = document.getElementById("booster-info");
+const gloveInfo = document.getElementById("glove-info");
+
+function displaySatelliteInfo() {
+  satelliteInfo.style.display = "block";
+  metalInfo.style.display = "none";
+  boosterInfo.style.display = "none";
+  gloveInfo.style.display = "none";
+}
+
+function displayMetalInfo() {
+  satelliteInfo.style.display = "none";
+  metalInfo.style.display = "block";
+  boosterInfo.style.display = "none";
+  gloveInfo.style.display = "none";
+}
+
+function displayBoosterInfo() {
+  satelliteInfo.style.display = "none";
+  metalInfo.style.display = "none";
+  boosterInfo.style.display = "block";
+  gloveInfo.style.display = "none";
+}
+
+function displayGloveInfo() {
+  satelliteInfo.style.display = "none";
+  metalInfo.style.display = "none";
+  boosterInfo.style.display = "none";
+  gloveInfo.style.display = "block";
+}
+
+satelliteBtn.addEventListener("click", displaySatelliteInfo);
+metalBtn.addEventListener("click", displayMetalInfo);
+boosterBtn.addEventListener("click", displayBoosterInfo);
+gloveBtn.addEventListener("click", displayGloveInfo);
