@@ -703,6 +703,21 @@ div.solution_btns button.btn_active:hover {
 }
 
 /* ------------------------
+Draggable
+------------------------ */
+.draggable {
+  position: absolute;
+  width: 10em;
+  cursor: move;
+  user-select: none;
+}
+
+#deb1 {
+  top: 530em;
+  left: 30em;
+}
+
+/* ------------------------
 Media queries
 ------------------------ */
 @media screen and (max-width: 1600px) {
@@ -715,6 +730,10 @@ Media queries
     font-size: 5em;
 
     animation: titleAnimation 3s ease-out;
+  }
+
+  #death-screen {
+    font-size: 0.8em;
   }
 
   section:first-of-type {
@@ -735,7 +754,7 @@ Media queries
 
   #hud {
     width: 14em;
-    height: 12em;
+    height: 14em;
     padding: 1.2em;
   }
 
@@ -743,11 +762,11 @@ Media queries
     height: 1.2em;
   }
 
-  section:nth-of-type(2) article {
-    width: 25vw;
+  section:nth-of-type(3) article {
+    width: 30vw;
     position: relative;
-    left: 85em;
-    top: 15em;
+    left: 83em;
+    top: 12em;
   }
 
   section.future,
@@ -762,4 +781,45 @@ Media queries
   .option img {
     width: 40em;
   }
+
+  section.history article {
+  width: 35%;
+  position: relative;
+  left: 15em;
+  top: 40em;
+}
+
+section.what-debris img#earth {
+  width: 50em;
+}
+
+.types-of-debris div:first-of-type img {
+  width: 3.5em;
+}
+
+.types-of-debris div:nth-of-type(2) img {
+  width: 2.5em;
+}
+
+.types-of-debris div:nth-of-type(3) img {
+  width: 3em;
+}
+
+.types-of-debris div:nth-of-type(4) img {
+  width: 3em;
+}
+
+section.what-debris div {
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.type {
+  background-size: 10px 10px;
+}
+
+.option img {
+  width: 28em;
+  padding: 1em;
+}
 }

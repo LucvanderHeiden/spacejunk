@@ -266,3 +266,41 @@ satelliteBtn.addEventListener("click", displaySatelliteInfo);
 metalBtn.addEventListener("click", displayMetalInfo);
 boosterBtn.addEventListener("click", displayBoosterInfo);
 gloveBtn.addEventListener("click", displayGloveInfo);
+
+// DRAGGABLE STUFF
+// const container = document.querySelector(".drag-section");
+
+// function onMouseDrag({ movementX, movementY}) {
+//   let getContainerStyle = window.getComputedStyle(container);
+//   let leftValue = parseInt(getContainerStyle.left);
+//   let topValue = parseInt(getContainerStyle.top);
+//   container.style.left = '{leftValue + movementX}px';
+//   container.style.left = `{topValue + movementY}px`;
+// }
+// container.addEventListener("mousedown", () => {
+//   console.log("mousedown");
+//   container.addEventListener("mousemove", onMouseDrag);
+// });
+
+// document.addEventListener("mosueup", () => {
+//   console.log("mouseup");
+//   container.removeEventListener("mousemove", onMouseDrag);
+// })
+
+const drag = document.querySelector(".draggable");
+let offsetX, offsetY;
+
+const move = (e) => {
+  drag.style.left = `${e.clientX - offsetX }px`;
+  drag.style.top = `${e.clientY - offsetY }px`;
+}
+
+drag.addEventListener("mousedown", (e) => {
+  offsetX = e.clientX - drag.offsetLeft;
+  offsetY = e.clientY - drag.offsetTop;
+  document.addEventListener("mousemove", move);
+});
+
+document.addEventListener("mouseup", () => {
+  document.removeEventListener("mousemove", move)
+});
