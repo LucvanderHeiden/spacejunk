@@ -482,7 +482,7 @@ section.spacejunk {
 Future
 ------------------------ */
 section.future {
-  margin-top: 25em;
+  margin-top: 10em;
   width: 40vw;
 }
 
@@ -713,8 +713,19 @@ Draggable
 }
 
 #deb1 {
-  top: 530em;
-  left: 30em;
+  top: 630em;
+  left: 60em;
+
+  animation: spinAnimation 30s linear infinite;
+}
+
+@keyframes spinAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ------------------------
@@ -752,6 +763,11 @@ Media queries
     }
   }
 
+  #deb1 {
+    top: 530em;
+    left: 30em;
+  }
+
   #hud {
     width: 14em;
     height: 14em;
@@ -783,43 +799,43 @@ Media queries
   }
 
   section.history article {
-  width: 35%;
-  position: relative;
-  left: 15em;
-  top: 40em;
-}
+    width: 35%;
+    position: relative;
+    left: 15em;
+    top: 40em;
+  }
 
-section.what-debris img#earth {
-  width: 50em;
-}
+  section.what-debris img#earth {
+    width: 50em;
+  }
 
-.types-of-debris div:first-of-type img {
-  width: 3.5em;
-}
+  .types-of-debris div:first-of-type img {
+    width: 3.5em;
+  }
 
-.types-of-debris div:nth-of-type(2) img {
-  width: 2.5em;
-}
+  .types-of-debris div:nth-of-type(2) img {
+    width: 2.5em;
+  }
 
-.types-of-debris div:nth-of-type(3) img {
-  width: 3em;
-}
+  .types-of-debris div:nth-of-type(3) img {
+    width: 3em;
+  }
 
-.types-of-debris div:nth-of-type(4) img {
-  width: 3em;
-}
+  .types-of-debris div:nth-of-type(4) img {
+    width: 3em;
+  }
 
-section.what-debris div {
-  margin-top: 6em;
-  margin-bottom: 6em;
-}
+  section.what-debris div {
+    margin-top: 6em;
+    margin-bottom: 6em;
+  }
 
-.type {
-  background-size: 10px 10px;
-}
+  .type {
+    background-size: 10px 10px;
+  }
 
-.option img {
-  width: 28em;
-  padding: 1em;
-}
+  .option img {
+    width: 28em;
+    padding: 1em;
+  }
 }
