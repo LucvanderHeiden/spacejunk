@@ -2,12 +2,11 @@ const bodyElement = document.querySelector("body");
 const debrisContainer1 = document.getElementById("debris-container");
 const debrisContainer2 = document.getElementById("debris-container2");
 const hud = document.getElementById("hud");
-let health = 100; // Initial health percentage
+let health = 100; // starting health percentage
 const deathScreen = document.getElementById("death-screen");
 const deathButton = document.getElementById("death-button");
 const explosionSound = new Audio("audio/explosion.wav");
-explosionSound.volume = 0.3; // Set the volume to 50%
-// const h1 = document.querySelector("h1");
+explosionSound.volume = 0.3; 
 const ost = new Audio("audio/maxrichter_return2.mp3");
 
 const btnOne = document.getElementById("btnOne");
@@ -268,24 +267,6 @@ boosterBtn.addEventListener("click", displayBoosterInfo);
 gloveBtn.addEventListener("click", displayGloveInfo);
 
 // DRAGGABLE STUFF
-// const container = document.querySelector(".drag-section");
-
-// function onMouseDrag({ movementX, movementY}) {
-//   let getContainerStyle = window.getComputedStyle(container);
-//   let leftValue = parseInt(getContainerStyle.left);
-//   let topValue = parseInt(getContainerStyle.top);
-//   container.style.left = '{leftValue + movementX}px';
-//   container.style.left = `{topValue + movementY}px`;
-// }
-// container.addEventListener("mousedown", () => {
-//   console.log("mousedown");
-//   container.addEventListener("mousemove", onMouseDrag);
-// });
-
-// document.addEventListener("mosueup", () => {
-//   console.log("mouseup");
-//   container.removeEventListener("mousemove", onMouseDrag);
-// })
 
 const drag = document.querySelector(".draggable");
 let offsetX, offsetY;
